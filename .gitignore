@@ -1,0 +1,17 @@
+ENV
+__pycache__
+*.pyc
+*.pyo
+.#*
+.*.sw?
+.coverage
+tests.xml
+pylint.output
+.idea
+issues.json
+*.log
+flycheck_*.py
+.mypy_cache
+redis_data
+.vscode
+venv
