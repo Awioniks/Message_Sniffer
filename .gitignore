@@ -14,3 +14,4 @@ flycheck_*.py
 .mypy_cache
 redis_data
 .vscode
+venv
