@@ -22,7 +22,7 @@ def start_simple_client(host, port, connections, message):
                                      message=message,
                                      outb=b'')
         sel.register(sock, events, data=data)
-        print("Connection nr {} started".format(new_connections))
+        print("connection started")
     handle_connections(sel)
 
 
@@ -37,10 +37,10 @@ def service_connection(key, mask, sel_object):
         if not data.outb:
             data.outb = data.message
         else:
-            print('sending', repr(data.outb), 'to connection', data.con_nr)
+            print('sending', str(repr(data.outb)))
             sent = sock.send(data.outb)
             data.outb = data.outb[sent:]
-            print('closing connection', data.con_nr)
+            print('closing connection')
             sel_object.unregister(sock)
             new_connections -= 1
             sock.close()
