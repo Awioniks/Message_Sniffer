@@ -98,4 +98,4 @@ if __name__ == '__main__':
     try:
         main()
     except KeyboardInterrupt:
-        print("Server Stopped Bye Young Jedi!")
+        print("\nServer Stopped Bye Young Jedi!")
